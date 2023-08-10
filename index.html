@@ -50,8 +50,18 @@
     // 🧠 Examples of usage:
     // deletePrice({ item: "Tesla Model 3", price: 40000 }) // should return { item: "Tesla Model 3" }
     // deletePrice({ item: "Kobo Libra 2" }) // should return { item: "Kobo Libra 2", priceless: true }
-    function deletePrice() {
+    function deletePrice(obj) {
+      //obj.price
+      //if no price then priceless: true
+      //after mods return obj
+      
+      if (obj.price !== undefined){
+        delete obj.price;
+      } else {
+        obj.priceless = true;
+      }
 
+      return obj
     }
 
     // 👉 CHALLENGE 4
